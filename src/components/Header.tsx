@@ -9,9 +9,11 @@ function headerLine() {
   return (header instanceof HTMLElement ? header.offsetHeight : 76) + 20
 }
 
+type NavId = (typeof navItems)[number]['id']
+
 function sectionFromScroll() {
   const line = headerLine()
-  let current = navItems[0].id
+  let current: NavId = navItems[0].id
 
   for (const item of navItems) {
     const el = document.getElementById(item.id)
@@ -77,7 +79,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => go('home')}
-          className="flex items-center gap-2.5"
+          className="flex cursor-pointer items-center gap-2.5"
         >
           <Logo showWordmark={false} markClassName="h-16 w-16" />
           <span className="text-[1.05rem] font-extrabold tracking-tight text-navy">
@@ -85,13 +87,13 @@ export default function Header() {
           </span>
         </button>
 
-        <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Primary">
           {navItems.map((item) => (
             <button
               key={item.id}
               type="button"
               onClick={() => go(item.id)}
-              className={`rounded-full px-2 py-2 text-[0.78rem] font-medium transition-colors 2xl:px-3 2xl:text-[0.92rem] ${
+              className={`cursor-pointer rounded-full px-2.5 py-2 text-[0.86rem] font-medium transition-colors xl:px-3 xl:text-[0.92rem] ${
                 active === item.id
                   ? 'text-gold-dark'
                   : 'text-ink/75 hover:text-navy'
@@ -102,32 +104,48 @@ export default function Header() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="inline-flex rounded-lg p-2 text-navy xl:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <IconClose /> : <IconMenu />}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => go('contact')}
+            className="hidden cursor-pointer rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-navy transition hover:bg-gold-dark sm:inline-flex"
+          >
+            Get in Touch
+          </button>
+          <button
+            type="button"
+            className="inline-flex cursor-pointer rounded-lg p-2 text-navy lg:hidden"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? <IconClose /> : <IconMenu />}
+          </button>
+        </div>
       </div>
 
       {open ? (
-        <div className="absolute inset-x-0 top-full border-t border-slate-100 bg-white shadow-lg xl:hidden">
+        <div className="absolute inset-x-0 top-full border-t border-slate-100 bg-white shadow-lg lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6" aria-label="Mobile">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => go(item.id)}
-                className={`rounded-lg px-3 py-3 text-left text-base font-medium ${
+                className={`cursor-pointer rounded-lg px-3 py-3 text-left text-base font-medium ${
                   active === item.id ? 'bg-gold/15 text-gold-dark' : 'text-ink/80'
                 }`}
               >
                 {item.label}
               </button>
             ))}
+            <button
+              type="button"
+              onClick={() => go('contact')}
+              className="mt-2 cursor-pointer rounded-full bg-gold px-5 py-3 text-sm font-bold text-navy"
+            >
+              Get in Touch
+            </button>
           </nav>
         </div>
       ) : null}

@@ -208,33 +208,6 @@ export function IconUsers({ className = 'h-6 w-6' }: IconProps) {
   )
 }
 
-export function IconCalendar({ className = 'h-6 w-6' }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-      <rect x="3.5" y="5" width="17" height="15.5" rx="2" />
-      <path d="M3.5 10h17M8 3.5v3.5M16 3.5v3.5" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-export function IconDownload({ className = 'h-6 w-6' }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-      <path d="M12 4v11M8 11.5 12 16l4-4.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M5 19h14" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-export function IconSync({ className = 'h-6 w-6' }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-      <path d="M4.5 12a7.5 7.5 0 0 1 12.7-5.4L19 4.5V9h-4.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M19.5 12a7.5 7.5 0 0 1-12.7 5.4L5 19.5V15h4.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
 const serviceIcons = {
   search: IconSearch,
   list: IconList,
@@ -248,10 +221,6 @@ const serviceIcons = {
   layers: IconLayers,
   badge: IconBadge,
   globe: IconGlobe,
-  users: IconUsers,
-  calendar: IconCalendar,
-  download: IconDownload,
-  sync: IconSync,
 }
 
 export function ServiceIcon({

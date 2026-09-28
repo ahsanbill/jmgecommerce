@@ -1,6 +1,5 @@
 import About from '../components/About.tsx'
 import Achievements from '../components/Achievements.tsx'
-import Analytics from '../components/Analytics.tsx'
 import Contact from '../components/Contact.tsx'
 import Footer from '../components/Footer.tsx'
 import Header from '../components/Header.tsx'
@@ -18,7 +17,6 @@ export default function Home() {
         <About />
         <Services />
         <Solutions />
-        <Analytics />
         <Achievements />
         <WhyChooseUs />
         <Contact />

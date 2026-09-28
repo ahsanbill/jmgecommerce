@@ -3,7 +3,6 @@ export const navItems = [
   { id: 'about', label: 'About Us' },
   { id: 'services', label: 'Services' },
   { id: 'solutions', label: 'Our Solutions' },
-  { id: 'analytics', label: 'Amazon Analytics Platform' },
   { id: 'achievements', label: 'Achievements' },
   { id: 'why-us', label: 'Why Choose Us' },
   { id: 'contact', label: 'Contact' },
@@ -12,37 +11,37 @@ export const navItems = [
 export const services = [
   {
     id: '01',
-    title: 'Product Hunting',
+    title: 'Product Hunting & Market Research',
     text: 'Discover the most profitable and trending products to sell on Amazon.',
     icon: 'search',
   },
   {
     id: '02',
-    title: 'Product Listing & Optimization',
+    title: 'Product Listing & SEO Optimization',
     text: "Create compelling product listings optimized for Amazon's search algorithm.",
     icon: 'list',
   },
   {
     id: '03',
-    title: 'Content Creation',
+    title: 'A+ Content Module Creation',
     text: 'Craft compelling product content that engages customers and converts.',
     icon: 'image',
   },
   {
     id: '04',
-    title: 'Store Management',
+    title: 'Amazon Store Management',
     text: 'Operate and manage your Amazon store from setup through daily growth.',
     icon: 'store',
   },
   {
     id: '05',
-    title: 'PPC Expertise',
+    title: 'Amazon PPC Advertising Expertise',
     text: 'Manage and optimize Amazon PPC campaigns to drive traffic and increase sales.',
     icon: 'ads',
   },
   {
     id: '06',
-    title: 'Brand Representative',
+    title: 'Brand Representative & Amazon Brand Registry Assistance',
     text: 'Build brand awareness on Amazon and protect your intellectual property.',
     icon: 'shield',
   },
@@ -54,9 +53,15 @@ export const services = [
   },
   {
     id: '08',
-    title: 'Full-fledged Launch',
+    title: 'Full-Fledged Amazon Product Launch',
     text: 'Execute a complete launch strategy to earn traction and long-term visibility.',
     icon: 'rocket',
+  },
+  {
+    id: '09',
+    title: 'JMGEcommerce Amazon Analytics Platform',
+    text: 'A seller dashboard for sales, ads, inventory, and keyword analytics.',
+    icon: 'layers',
   },
 ] as const
 
@@ -90,89 +95,6 @@ export const whyItems = [
     title: 'Global Reach',
     text: 'Experience launching products across multiple Amazon marketplaces.',
     icon: 'globe',
-  },
-] as const
-
-export const analyticsFeatures = [
-  {
-    title: 'Amazon seller dashboard',
-    text: 'A unified view of your Amazon seller account, so key numbers are easy to find.',
-    icon: 'store',
-  },
-  {
-    title: 'Sales analytics',
-    text: 'Track revenue, orders, and growth trends across marketplaces and time periods.',
-    icon: 'seo',
-  },
-  {
-    title: 'Product performance analytics',
-    text: 'See which products drive sales, conversion, and returns at a glance.',
-    icon: 'badge',
-  },
-  {
-    title: 'Brand Analytics data visualization',
-    text: 'Turn Amazon Brand Analytics into clear charts your team can act on.',
-    icon: 'layers',
-  },
-  {
-    title: 'Keyword / search-term analytics',
-    text: 'Understand the search terms that bring buyers to your listings.',
-    icon: 'search',
-  },
-  {
-    title: 'Advertising performance dashboard',
-    text: 'Monitor PPC spend, ACOS, and campaign results in one place.',
-    icon: 'ads',
-  },
-  {
-    title: 'Inventory analytics',
-    text: 'Spot stock risks, aging inventory, and replenishment needs early.',
-    icon: 'list',
-  },
-  {
-    title: 'ASIN-level reporting',
-    text: 'Drill into performance for each ASIN instead of only store-wide totals.',
-    icon: 'globe',
-  },
-  {
-    title: 'Date-range reporting',
-    text: 'Compare any custom date range across your most important metrics.',
-    icon: 'calendar',
-  },
-  {
-    title: 'Downloadable reports',
-    text: 'Export reports for sharing, accounting, and deeper offline analysis.',
-    icon: 'download',
-  },
-  {
-    title: 'Automated data synchronization',
-    text: 'Keep dashboards current with automatic Amazon data sync.',
-    icon: 'sync',
-  },
-  {
-    title: 'Seller account connection through Amazon authorization',
-    text: 'Connect securely with official Amazon authorization, not shared passwords.',
-    icon: 'shield',
-  },
-  {
-    title: 'Role-specific Amazon data access',
-    text: 'Give each teammate only the data they need for their role.',
-    icon: 'users',
-  },
-  {
-    title: 'Pricing / subscription plans',
-    text: 'Flexible plans designed for growing Amazon brands and agencies.',
-    icon: 'star',
-  },
-  {
-    title: 'Screenshots or a product demo',
-    text: 'Preview the platform with screenshots and a guided product walkthrough.',
-    icon: 'image',
-  },
-  {
-    title: 'Planned launch date',
-    text: 'Launch details will be announced soon. Get in touch to join the waitlist.',
-    icon: 'rocket',
   },
 ] as const
 
